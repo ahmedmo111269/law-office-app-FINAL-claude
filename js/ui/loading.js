@@ -1,0 +1,1 @@
+export function setLoading(container,loading,message='جاري التحميل…'){if(!container)return;container.setAttribute('aria-busy',String(loading));if(loading)container.innerHTML=`<div class="card muted">${message}</div>`}

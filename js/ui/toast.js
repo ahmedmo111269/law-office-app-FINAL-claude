@@ -1,0 +1,1 @@
+export function toast(message,type='info'){const root=document.getElementById('toastRoot');if(!root)return;const el=document.createElement('div');el.className='toast';el.textContent=message;if(type==='error')el.setAttribute('role','alert');root.appendChild(el);setTimeout(()=>el.remove(),3500)}

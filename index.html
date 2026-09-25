@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1f2937">
+  <meta name="description" content="مكتب الأستاذ / أحمد محمد خضير المحامى — نظام إدارة المكتب المحلي">
+  <title>⚖️ مكتب الأستاذ / أحمد محمد خضير المحامى — نظام إدارة المكتب</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="مكتب أحمد خضير">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <noscript>يحتاج هذا التطبيق إلى JavaScript للعمل.</noscript>
+  <div id="sidebarBackdrop" class="sidebar-backdrop hidden" aria-hidden="true"></div>
+  <div id="app" class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="التنقل الرئيسي">
+      <div class="brand"><div class="brand-mark">⚖️</div><div><strong>مكتب الأستاذ / أحمد محمد خضير المحامى</strong><small>نظام إدارة المكتب</small></div></div>
+      <nav id="mainNav" class="main-nav"></nav>
+      <div class="sidebar-footer"><span id="dbStatus">جاري تجهيز قاعدة البيانات…</span></div>
+    </aside>
+    <div class="app-main">
+      <header class="topbar">
+        <button id="menuToggle" class="icon-button" type="button" aria-label="فتح القائمة" aria-controls="sidebar">☰</button>
+        <div class="topbar-title"><h1 id="pageTitle">الرئيسية</h1><p id="pageSubtitle">مركز إدارة المكتب</p></div>
+        <div class="topbar-actions"><button id="notificationButton" class="secondary-button" type="button" aria-label="مركز التنبيهات">🔔 <span class="notification-count" id="notificationCount">0</span></button><button id="focusButton" class="secondary-button" type="button">◐ تركيز</button><button id="globalSearchButton" class="secondary-button" type="button">🔎 بحث شامل</button><button id="quickAddButton" class="primary-button" type="button">＋ إضافة سريعة</button></div>
+      </header>
+      <main id="page" class="page" tabindex="-1"></main>
+      <nav class="mobile-bottom-nav" aria-label="تنقل سريع">
+        <a href="#/dashboard">🏠<span>الرئيسية</span></a><a href="#/daily">🎯<span>يومي</span></a><a href="#/quick-add">⚡<span>إضافة</span></a><a href="#/search">🔎<span>بحث</span></a>
+      </nav>
+    </div>
+  </div>
+  <div id="toastRoot" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+  <div id="modalRoot"></div>
+  <div id="commandPaletteRoot"></div>
+  <div id="globalFilterHost" class="hidden"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

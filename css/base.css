@@ -1,0 +1,42 @@
+:root{font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;color:#17202a;background:#f6f7f9;line-height:1.6;font-synthesis:none;--border:#d9dee5;--surface:#fff;--muted:#667085;--text:#17202a;--primary:#1f2937;--danger:#b42318;--success:#027a48;--warning:#9a6700;--info:#175cd3;--radius:14px}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#f6f7f9}body{direction:rtl}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.hidden{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.muted{color:var(--muted)}.danger{color:var(--danger)}.success{color:var(--success)}:focus-visible{outline:3px solid rgba(23,92,211,.25);outline-offset:2px}
+
+/* Stage 30 — browser-native print / Save as PDF */
+@media print {
+  @page { size: A4 portrait; margin: 12mm; }
+  html, body { background: #fff !important; }
+  body.print-report-mode > * { visibility: hidden !important; }
+  body.print-report-mode #page,
+  body.print-report-mode #page * { visibility: visible !important; }
+  body.print-report-mode #page {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+  body.print-report-mode .toolbar,
+  body.print-report-mode .print-control,
+  body.print-report-mode [data-export],
+  body.print-report-mode #refreshStats,
+  body.print-report-mode .spinner,
+  body.print-report-mode .state-card { display: none !important; }
+  body.print-report-mode .card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #bbb !important;
+    margin-bottom: 8mm !important;
+  }
+  body.print-report-mode .grid { display: grid !important; }
+  body.print-report-mode .report-bar-track { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  body.print-report-mode #page::before {
+    content: attr(data-print-title);
+    display: block;
+    font-size: 18pt;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 8mm;
+  }
+}

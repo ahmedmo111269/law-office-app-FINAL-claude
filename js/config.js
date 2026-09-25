@@ -1,0 +1,1 @@
+export const APP_CONFIG=Object.freeze({name:"مكتب الأستاذ / أحمد محمد خضير المحامى",fullName:"⚖️ مكتب الأستاذ / أحمد محمد خضير المحامى — نظام إدارة المكتب",version:"2.3.0",dbName:"LawOfficeDB",dbVersion:15,backupFormat:"law-office-backup",pageSize:50,locale:"ar-EG",currency:"EGP"});
